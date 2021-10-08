@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300&display=swap');
-
 * {
     box-sizing: border-box;
   }
-  /*Reseta*/
+    /*Reseta*/
 a{
     text-decoration: none;
     color: #ededed;
@@ -21,6 +20,8 @@ li{
 ul{
     padding: 0;
     margin: 0;
+    overflow: hidden;
+    position: relative;
   }
 body{
     margin: 0;
@@ -33,17 +34,21 @@ body{
     background: #f1f3f2;
     box-shadow: 0px 10px 13px -7px #000000, 0px 12px 12px 1px #AB7416;
   }
+ 
 .header{
     display: flex;
     justify-content: space-between;
     max-width: 928px;
     margin: 0 auto;
+    min-height: 64px;
+    align-items: center;
   }
 .header .nav{
     display:flex;
   }
 .header .nav .fst_nav{
     max-width: 352px;
+    padding-left: 15px;
   }
 
 .header .nav ul::before{
@@ -52,7 +57,6 @@ body{
     position: absolute;
     height: 31px;
     background: url(images/nav_slide.png);
-    margin: 21px 8px 0;
   }
 .header .nav li {
     float: left;
@@ -60,7 +64,6 @@ body{
   }
 .header .nav li a{
     display: block;
-    padding: 30px 0 18px;
     font-family: Arial;
     font-weight: bold;
     font-size: 14px;
@@ -73,6 +76,7 @@ body{
   }
 .header .nav .sec_nav{
     max-width: 168px;
+    padding-left: 15px;
   }
 
 .header .nav .sec_nav li a{
@@ -81,13 +85,12 @@ body{
   }
 .header .logo{
     position: relative;
+    padding: 20px 0 0 20px;
   }
-.header .logo img{
-    margin: 20px 31px -25px 27px;
-  } 
+
 .header .logo::after{
     content: '';
-    top: 64px;
+    top: 62px;
     left: 0;
     width: 221px;
     height: 37px;
@@ -103,15 +106,16 @@ body{
     max-width: 930px;
     display:flex;
     margin: 0 auto;
+    align-items: center;
   }
 .banner .banner_text{
     max-width: 480px;
   }
     .banner .banner_text h2{
-    padding: 98px 0 0;
     color: beige;
     font-size: 25px;
     font-family: 'Arial';
+    padding-bottom: 10px;
   }
 .banner .banner_text p{
     font-size: 15px;
@@ -138,9 +142,9 @@ body{
     align-items: center;
     justify-content: space-between;
     max-width: 919px;
+    padding: 32px 0 24px;
   }
 .learn_more h3{
-    padding: 32px 0 24px;
     color: #161616;
     max-width: 435px;
     font-style: italic;
@@ -148,9 +152,7 @@ body{
     font-size: 20px;
     font-family: Georgia;
   }
-.learn_more .btn{
-    padding: 25px 0 0;
-  }
+
 .learn_more button{
     height: 42px;
     width: 208px;
@@ -175,6 +177,9 @@ hr{
     border: 1px solid #eaeaea;
   }
     /*what_we_do*/
+    .article{
+      padding-top: 25px;
+    }
 .side_bar{
     max-width: 588px;
   }
@@ -183,7 +188,6 @@ hr{
     font-size: 18px;
   }
 .side_bar .heading{
-    padding: 25px 0 0 0;
     color: #f25a5a;
     font-size: 14px;
   }
@@ -305,10 +309,10 @@ hr{
     display: flex;
     margin: 0 auto;  
     justify-content: space-between;
+    align-items: center;
   }
 .footer .footer_nav{
     color: #fff;
-    padding: 21px 0 23px;
   }
 .footer .footer_nav li{
     float: left;
@@ -326,19 +330,21 @@ hr{
     color: #f8bb7a;
   }
 .footer .footer_text{
-    padding: 31px 0 0;
   }
 .footer_section{
     background: linear-gradient(360deg, rgba(156,60,2,1) 0%, rgba(217,81,0,1) 9%, rgba(229,96,5,1) 19%, rgba(229,96,5,1) 30%, rgba(232,103,7,1) 46%, rgba(241,131,18,1) 61%, rgba(254,168,31,1) 98%, rgba(199,135,27,1) 100%);
+    padding:21px 0 23px;
   }
     /*responsivity code*/
 @media only screen and (max-width: 767px) {
     /*nav-bar*/
   .header{
     flex-direction: column;
+    padding: 10px 0;
   }
   .logo{
     margin: 0 auto;
+    padding: 20px 0 20px;
   }
   .logo::after{
     display: none;
@@ -353,10 +359,15 @@ hr{
   }
   .banner_text{
     text-align: center;
+    padding-top: 20px;
   }
+  
     /*sign_up*/
   .learn_more{
     flex-direction: column;
+  }
+  .learn_more h3{
+    padding-bottom: 15px;
   }
     /*what-we-do*/
   .what_we_do{
