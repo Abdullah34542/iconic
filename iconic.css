@@ -325,13 +325,13 @@ hr{
     /*responsivity code*/
 @media only screen and (max-width: 767px) {
     /*nav-bar*/
-  .header{
+  .nav_bar .container{
     flex-direction: column;
     padding: 10px 0;
   }
-  .header .logo{
+  .nav_bar .container .logo{
     margin: 0 auto;
-    padding: 20px 0 20px;
+    padding:10px 0 10px 20px;
   }
   .logo::after{
     display: none;
@@ -340,7 +340,7 @@ hr{
     justify-content: center;
   }
     /*banner*/
-  .container{
+  .banner .container{
     flex-direction: column;
     align-items: center;
   }
@@ -352,24 +352,24 @@ hr{
     margin: 0;
   }
     /*sign_up*/
-  .container{
+  .sign_up .container{
     flex-direction: column;
   }
-  .container h3{
+  .sign_up .container h3{
     padding-bottom: 25px;
   }
-  .container button{
+  .sign_up .container button{
     margin: 0;
   }
     /*what-we-do*/
-  .what_we_do{
+  .what_we_do .container{
     flex-direction: column;
   }
-  .side_bar{
+  .what_we_do .container .side_text{
     text-align: center;
   }
     /*iamge_section*/
-  .main_container{
+  .section .container{
     flex-direction: column;
     align-items: center;
   }
@@ -377,12 +377,13 @@ hr{
     box-shadow: none;
   }
     /*footer*/
-  footer .container{
+  .footer .container{
       flex-direction: column;
       text-align: center;
   }
   .footer_nav{
     margin: 0 auto;
+    display: contents;
   }
   .footer_text p{
     margin: 0;
