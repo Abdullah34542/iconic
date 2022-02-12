@@ -126,8 +126,10 @@ body{
     margin: 23px -20px -18px 0;
   }
 .banner .bg_img img{
-    margin: 12px 66px;
-    background-size: cover;
+    margin: 0;
+    width: 86%;
+    height: 90%;
+    padding: 12px 0 0px 67px;
   }
     /*sign_up*/
 .sign_up{
